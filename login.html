@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Custom style  -->
+    <style>
+        .py-8 {
+            padding-top: 8rem;
+        }
+
+        ::-ms-reveal {
+            display: none;
+        }
+
+        #pwd_input_icon {
+            position: relative;
+        }
+
+        #eyeicon {
+            font-size: 20px;
+            color: var(--bs-border-color);
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container py-8">
+        <!-- justify-content-end  调整位置 -->
+        <div class="row justify-content-end">
+            <!-- 不同屏幕占用大小特色 -->
+            <div class="col-xl-5 col-lg-6 col-12  text-center font-monospace">
+                <!-- header -->
+                <div class="header">
+                    <img class="mb-4" src="/images/bootstrap-fill.svg" alt="" width="72" height="72">
+                    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                </div>
+                <!-- login form body -->
+                <div class="card">
+                    <div class="card-body">
+                        <form class="text-start">
+                            <div class="mb-3">
+                                <label class="form-label" for="inputid">UserID</label>
+                                <input class="form-control" type="text" name="inputid" id="inputid">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="inputpwd">Password</label>
+                                <div id="pwd_input_icon">
+                                    <input class="form-control" type="password" id="inputpwd"
+                                        aria-describedby="btn-eye">
+                                    <i class="bi bi-eye" onclick="togglePasswordVisibility()" id="eyeicon"></i>
+                                </div>
+                            </div>
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="footer">
+                    <p class="mt-5 mb-3 text-muted">bootstrap5 © 2024-</p>
+                </div>
+            </div>
+    </main>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript  -->
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("inputpwd");
+            var eyeicon = document.getElementById("eyeicon");
+            // 切换密码字段的 type 属性值来改变可见状态
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeicon.classList.remove("bi-eye"); // 移除隐藏图标类
+                eyeicon.classList.add("bi-eye-slash"); // 添加显示图标类
+            } else {
+                passwordField.type = "password";
+                eyeicon.classList.remove("bi-eye-slash"); // 移除显示图标类
+                eyeicon.classList.add("bi-eye"); // 添加隐藏图标类
+            }
+        }
+    </script>
+</body>
+
+</html>
