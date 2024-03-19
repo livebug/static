@@ -1,13 +1,28 @@
-#wrapper {
-    display: flex
+/* Custom style login/register */
+.py-8 {
+    padding-top: 8rem;
 }
 
-#wrapper #content {
-    background-color: #f8f9fc;
-    width: 100%;
-    overflow-x: hidden
+::-ms-reveal {
+    display: none;
 }
 
-#wrapper #content #main-content {
-    flex: 1 0 auto
+.pwd_input_icon {
+    position: relative;
 }
+
+.eye-icon {
+    cursor:pointer; /* 鼠标样式 */
+    font-size: 20px;
+    color: var(--bs-border-color);
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+/* 鼠标悬浮时样式 */
+.eye-icon:hover {
+    color: black;
+}
+   
