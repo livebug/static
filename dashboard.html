@@ -17,6 +17,7 @@
       --myapp-header-height : 50px;
       --myapp-footer-height : 30px;
       --main-nav-height: 20px;
+      --myapp-content-sidebar-min-height: 256px;
     }
 
     #myapp {
@@ -48,6 +49,8 @@
     #myapp-content-sidebar {
       height: calc(100vh - var(--myapp-header-height) - var(--myapp-footer-height) );
       overflow: auto;
+      width: 10%;
+      min-width: var(--myapp-content-sidebar-min-height);
     }
 
     #myapp-content-main {
@@ -71,22 +74,40 @@
     <a class="navbar-brand text-white px-3" href="#">Company name header </a>
   </header>
   <div id="myapp-content" class="">
-    <div id="myapp-content-sidebar" class="sidebar col-2">
-      sidebar
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
-      <div style="height: 170px;" class="border-black border-1 border"> style="height: 270px;" </div>
+    <div id="myapp-content-sidebar" class="sidebar p-3">
+      <!-- sidebar -->
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link link-body-emphasis" aria-current="page">
+            <i class="pe-2 bi bi-house"></i>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-body-emphasis">
+            <i class="pe-2 bi bi-speedometer2"></i>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-body-emphasis">
+            <i class="pe-2 bi bi-table"></i>
+            Orders
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-body-emphasis">
+            <i class="pe-2 bi bi-grid"></i>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-body-emphasis">
+            <i class="pe-2 bi bi-person-circle"></i>
+            Customers
+          </a>
+        </li>
+      </ul>
     </div>
     <main id="myapp-content-main">
       <div id="main-nav" class="bg-info">
