@@ -53,6 +53,11 @@
       min-width: var(--myapp-content-sidebar-min-height);
     }
 
+    #myapp-header-title {
+      width: 10%;
+      min-width: var(--myapp-content-sidebar-min-height);
+    }
+
     #myapp-content-main {
       flex: 1;
       background-color: darkcyan;
@@ -70,8 +75,10 @@
 </head>
 
 <body id="myapp">
-  <header id="myapp-header" class="navbar shadow bg-black">
-    <a class="navbar-brand text-white px-3" href="#">Company name header </a>
+  <header id="myapp-header" class="shadow bg-black">
+    <div id="myapp-header-title" class="d-flex flex-wrap justify-content-center align-content-center text-bg-info h-100">
+      <a class="align-content-center" href="#" style="text-decoration: none;color: black;">Company name header </a>
+    </div>
   </header>
   <div id="myapp-content" class="">
     <div id="myapp-content-sidebar" class="sidebar p-3">
