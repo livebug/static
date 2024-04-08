@@ -14,7 +14,7 @@
   <!-- Custom style  -->
   <style>
     :root{
-      --myapp-header-height : 50px;
+      --myapp-header-height : 30px;
       --myapp-footer-height : 30px;
       --main-nav-height: 20px;
       --myapp-content-sidebar-min-height: 256px;
@@ -38,6 +38,7 @@
       z-index: 100;
       height: var(--myapp-footer-height);
       bottom: 0;
+      visibility: hidden;
     }
 
     #myapp-content {
@@ -76,12 +77,12 @@
 
 <body id="myapp">
   <header id="myapp-header" class="shadow bg-black">
-    <div id="myapp-header-title" class="d-flex flex-wrap justify-content-center align-content-center text-bg-info h-100">
-      <a class="align-content-center" href="#" style="text-decoration: none;color: black;">Company name header </a>
+    <div id="myapp-header-title" class="d-flex flex-wrap justify-content-center align-content-center h-100">
+      <a class="align-content-center" href="#" style="text-decoration: none;color: white;">Company name header </a>
     </div>
   </header>
   <div id="myapp-content" class="">
-    <div id="myapp-content-sidebar" class="sidebar p-3">
+    <div id="myapp-content-sidebar" class="sidebar p-3" style="background:  grey;">
       <!-- sidebar -->
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
